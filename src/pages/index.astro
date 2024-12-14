@@ -1,11 +1,70 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from "../components/Header.astro";
+import Heading from "../components/Heading.astro";
+import Item from "../components/Item.astro";
+import List from "../components/List.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <div class="max-h-screen min-h-screen bg-primary flex flex-col">
+    <Header />
+    <main
+      class="space-y-10 flex-1 h-full overflow-auto border-l-2 border-t-2 py-4 border-black"
+    >
+      <section id="about">
+        <p class="px-2">
+          I am Sebastian Sala, a 21-year-old professioal with a background in
+          Computacional Technologies. My passion for technology and software
+          development has led me to explore diverse horizons of software
+          development, maintaing an open mind set toward diffrente branches. I
+          am focused on web development, however, I am not limited to this area.
+          I am constantly open to learn and address new challenges.
+        </p>
+      </section>
+
+      <section id="experience">
+        <Heading> Experience </Heading>
+        <ul class="px-2 mt-6">
+          <li>
+            <h3>Frontend Developer</h3>
+            <p>Company Name</p>
+            <p>2020 - 2021</p>
+          </li>
+          <li>
+            <h3>Backend Developer</h3>
+            <p>Company Name</p>
+            <p>2021 - 2022</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="projects">
+        <Heading> Projects </Heading>
+
+        <List>
+          <Item
+            title="Ecommerce (KBDFans Clone)"
+            description="KBDFans Clone is a project that aims to replicate the functionality of an ecommerce platform. It is built using Next.js, Tailwind CSS, Stripe and Supabase (with prisma). Deployed using Vercel."
+            href="https://kbdfans-clone.vercel.app/"
+          />
+          <Item
+            title="Social Media (X Clone)"
+            description="X Clone is a project that aims to replicate the functionality of a popular social media platform. It is built using Remix, Nest.js, and SQLite. Deployed using Docker."
+          />
+          <Item
+            title="Typeorm Populate"
+            description="TypeORM Populate is a lightweight library designed for use with TypeORM. It simplifies the process of seeding your database, making it easy and reusable to populate data during development or testing."
+            href=""
+          />
+        </List>
+      </section>
+      <!-- <footer class="bg-third text-white text-center py-2">
+      <p>© 2022 Portfolio does not exist</p>
+    </footer> -->
+      <footer class="border-t-white font-semibold py-2">
+        <p class="col-span-9 text-center">© 2022 Portfolio does not exist</p>
+      </footer>
+    </main>
+  </div>
 </Layout>

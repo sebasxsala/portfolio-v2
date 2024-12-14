@@ -1,22 +1,65 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro Basics</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+<style is:global>
+  :root {
+    --primary-color: #c0c0c0;
+    --secondary-color: #c0c1c3;
+    --third-color: #010080;
+  }
+
+  body {
+    font-family: "Courier New", monospace;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  }
+
+  .border-t-white {
+    @apply border-white border-t-2;
+  }
+
+  .border-lt-white {
+    @apply border-white border-t-2 border-l-2;
+  }
+
+  .old-link {
+    font-family: "Times New Roman", serif;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    border: 2px solid transparent;
+    padding: 2px 4px;
+    box-shadow:
+      2px 2px 0 #000,
+      -2px -2px 0 #ccc;
+    background-color: #f0f0f0;
+    /* transition: all 0.2s ease-in-out; */
+  }
+
+  /* .old-link:visited {
+    color: purple;
+  } */
+
+  .old-link:hover {
+    color: red;
+    background-color: #ffffe0;
+    text-decoration: none;
+  }
+
+  .old-link:active {
+    color: orange;
+    box-shadow:
+      inset 2px 2px 0 #000,
+      inset -2px -2px 0 #ccc;
+  }
 </style>
