@@ -3,7 +3,9 @@ import Header from "../components/Header.astro";
 import Heading from "../components/Heading.astro";
 import Item from "../components/Item.astro";
 import List from "../components/List.astro";
+import Projects from "../components/Projects.astro";
 import Layout from "../layouts/Layout.astro";
+import Experience from "../components/Experience.astro";
 ---
 
 <Layout>
@@ -23,47 +25,15 @@ import Layout from "../layouts/Layout.astro";
         </p>
       </section>
 
-      <section id="experience">
-        <Heading> Experience </Heading>
-        <ul class="px-2 mt-6">
-          <li>
-            <h3>Frontend Developer</h3>
-            <p>Company Name</p>
-            <p>2020 - 2021</p>
-          </li>
-          <li>
-            <h3>Backend Developer</h3>
-            <p>Company Name</p>
-            <p>2021 - 2022</p>
-          </li>
-        </ul>
-      </section>
+      <Experience />
 
-      <section id="projects">
-        <Heading> Projects </Heading>
+      <Projects />
 
-        <List>
-          <Item
-            title="Ecommerce (KBDFans Clone)"
-            description="KBDFans Clone is a project that aims to replicate the functionality of an ecommerce platform. It is built using Next.js, Tailwind CSS, Stripe and Supabase (with prisma). Deployed using Vercel."
-            href="https://kbdfans-clone.vercel.app/"
-          />
-          <Item
-            title="Social Media (X Clone)"
-            description="X Clone is a project that aims to replicate the functionality of a popular social media platform. It is built using Remix, Nest.js, and SQLite. Deployed using Docker."
-          />
-          <Item
-            title="Typeorm Populate"
-            description="TypeORM Populate is a lightweight library designed for use with TypeORM. It simplifies the process of seeding your database, making it easy and reusable to populate data during development or testing."
-            href=""
-          />
-        </List>
-      </section>
       <!-- <footer class="bg-third text-white text-center py-2">
-      <p>© 2022 Portfolio does not exist</p>
-    </footer> -->
+        <p>© 2022 Portfolio does not exist</p>
+      </footer> -->
       <footer class="border-t-white font-semibold py-2">
-        <p class="col-span-9 text-center">© 2022 Portfolio does not exist</p>
+        <p class="col-span-9 text-center">© 1997 Portfolio does not exist</p>
       </footer>
     </main>
   </div>

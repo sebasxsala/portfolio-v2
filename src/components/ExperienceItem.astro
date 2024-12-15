@@ -1,0 +1,19 @@
+---
+const { title, description, href, date, company } = Astro.props;
+---
+
+<li>
+  <div class="flex justify-between items-center">
+    <h3 class="underline underline-offset-4">
+      <a href={href} class="old-link" target="_blank">{title}</a>
+    </h3>
+
+    <p>{date}</p>
+  </div>
+
+  <p class="mt-2 underline underline-offset-4">{company}</p>
+
+  <p>
+    {description}
+  </p>
+</li>

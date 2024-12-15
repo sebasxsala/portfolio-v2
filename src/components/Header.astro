@@ -5,14 +5,14 @@
       <span class="font-bold"> Portfolio does not exist </span>
     </div>
     <div class="flex items-center gap-1">
-      <button class="size-4 bg-primary border-t-white"></button>
-      <button class="size-4 bg-primary border-t-white"></button>
-      <button class="size-4 bg-primary border-t-white"></button>
+      <button class="old-icon maximize-icon"></button>
+      <button class="old-icon minimize-icon"></button>
+      <button class="old-icon close-icon"></button>
     </div>
   </div>
   <div class="flex gap-2 text-sm border-t-white bg-primary px-2 border-t-2">
     <a href="/" class="text-third"><span class="underline">H</span>ome</a>
-    <a href="#about" class="text-third"><span class="underline">A</span>bout</a>
+    <!-- <a href="#about" class="text-third"><span class="underline">A</span>bout</a> -->
     <a href="#experience" class="text-third">
       <span class="underline">E</span>xperience
     </a>
@@ -21,3 +21,64 @@
     </a>
   </div>
 </header>
+
+<script>
+  document.querySelector(".close-icon").addEventListener("click", () => {
+    window.close();
+  });
+
+  document.querySelector(".minimize-icon").addEventListener("click", () => {
+    window.minimize();
+  });
+
+  document.querySelector(".maximize-icon").addEventListener("click", () => {
+    window.maximize();
+  });
+</script>
+
+<style>
+  .old-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background-color: #d9d9d9;
+    border: 2px solid #808080;
+    position: relative;
+    margin: 5px;
+    box-shadow:
+      inset -2px -2px 0 #ffffff,
+      inset 2px 2px 0 #808080;
+  }
+
+  .close-icon::before,
+  .close-icon::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    width: 2px;
+    height: 10px;
+    background-color: black;
+  }
+  .close-icon::before {
+    transform: rotate(45deg);
+  }
+  .close-icon::after {
+    transform: rotate(-45deg);
+  }
+
+  .minimize-icon::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 2px;
+    width: 10px;
+    height: 2px;
+    background-color: black;
+  }
+
+  .maximize-icon {
+    border: 2px solid black;
+    box-shadow: none; /* Quitar sombra extra */
+  }
+</style>

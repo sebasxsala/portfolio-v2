@@ -1,0 +1,25 @@
+---
+import { getCollection } from "astro:content";
+import ExperienceItem from "./ExperienceItem.astro";
+import Heading from "./Heading.astro";
+import List from "./List.astro";
+
+const experiences = await getCollection("experiences");
+---
+
+<section id="experience">
+  <Heading> Experience </Heading>
+
+  <List>
+    {
+      experiences.map((experience) => (
+        <ExperienceItem
+          title={experience.data.company}
+          company={experience.data.title}
+          date={experience.data.date}
+          description={experience.data.description}
+        />
+      ))
+    }
+  </List>
+</section>

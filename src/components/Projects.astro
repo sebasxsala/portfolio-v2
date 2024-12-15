@@ -1,0 +1,25 @@
+---
+import Item from "./Item.astro";
+import List from "./List.astro";
+import Heading from "./Heading.astro";
+
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("projects");
+---
+
+<section id="projects">
+  <Heading> Projects </Heading>
+
+  <List>
+    {
+      projects.map((project) => (
+        <Item
+          title={project.data.title}
+          description={project.data.description}
+          href={project.data.href}
+        />
+      ))
+    }
+  </List>
+</section>
