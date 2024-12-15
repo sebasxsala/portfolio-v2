@@ -5,6 +5,9 @@ import Heading from "./Heading.astro";
 import List from "./List.astro";
 
 const experiences = await getCollection("experiences");
+const sortedExperiences = experiences.sort((a, b) => {
+  return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+});
 ---
 
 <section id="experience">
@@ -12,7 +15,7 @@ const experiences = await getCollection("experiences");
 
   <List>
     {
-      experiences.map((experience) => (
+      sortedExperiences.map((experience) => (
         <ExperienceItem
           title={experience.data.company}
           company={experience.data.title}
