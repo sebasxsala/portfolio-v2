@@ -1,40 +1,26 @@
 ---
 import Header from "../components/Header.astro";
-import Heading from "../components/Heading.astro";
-import Item from "../components/Item.astro";
-import List from "../components/List.astro";
+
 import Projects from "../components/Projects.astro";
 import Layout from "../layouts/Layout.astro";
 import Experience from "../components/Experience.astro";
+import About from "../components/About.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout>
   <div class="max-h-screen min-h-screen bg-primary flex flex-col">
     <Header />
     <main
-      class="space-y-10 flex-1 h-full overflow-auto border-l-2 border-t-2 py-4 border-black"
+      class="space-y-10 flex-1 overflow-auto border-l-2 border-t-2 pt-4 border-black"
     >
-      <section id="about">
-        <p class="px-2">
-          I am Sebastian Sala, a 21-year-old professioal with a background in
-          Computacional Technologies. My passion for technology and software
-          development has led me to explore diverse horizons of software
-          development, maintaing an open mind set toward diffrente branches. I
-          am focused on web development, however, I am not limited to this area.
-          I am constantly open to learn and address new challenges.
-        </p>
-      </section>
+      <About />
 
       <Experience />
 
       <Projects />
 
-      <!-- <footer class="bg-third text-white text-center py-2">
-        <p>© 2022 Portfolio does not exist</p>
-      </footer> -->
-      <footer class="border-t-white font-semibold py-2">
-        <p class="col-span-9 text-center">© 1997 Portfolio does not exist</p>
-      </footer>
+      <Footer />
     </main>
   </div>
 </Layout>
