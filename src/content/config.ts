@@ -13,7 +13,7 @@ const experiences = defineCollection({
     title: z.string(),
     company: z.string(),
     date: z.string(),
-    description: z.string(),
+    description: z.array(z.string()),
   }),
 });
 
