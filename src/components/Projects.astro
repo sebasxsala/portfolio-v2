@@ -1,19 +1,22 @@
 ---
-import Item from "./Item.astro";
-import List from "./List.astro";
-import Heading from "./Heading.astro";
+import Item from './Item.astro';
+import List from './List.astro';
+import Heading from './Heading.astro';
 
-import { getCollection } from "astro:content";
+import { getCollection } from 'astro:content';
 
-const projects = await getCollection("projects");
+const projects = await getCollection('projects');
+const sortedProjects = projects.sort((a, b) =>
+  a.id.localeCompare(b.id, undefined, { numeric: true })
+);
 ---
 
-<section id="projects" class="pb-10">
+<section id='projects' class='pb-10'>
   <Heading> Projects </Heading>
 
   <List>
     {
-      projects.map((project) => (
+      sortedProjects.map((project) => (
         <Item
           title={project.data.title}
           description={project.data.description}

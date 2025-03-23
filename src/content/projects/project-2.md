@@ -1,5 +1,5 @@
 ---
-title: Social Media (X Clone)
-description: X Clone is a project that aims to replicate the functionality of a popular social media platform. It is built using Remix, Nest.js, and SQLite. Deployed using Docker.
-href: https://x-frontend-orcin.vercel.app/
+title: Scrape-AI
+description: Scrape-AI is a project built with Next.js that scrapes web pages and delivers the extracted data in a readable JSON format.
+href: https://scrape-ai.vercel.app/
 ---

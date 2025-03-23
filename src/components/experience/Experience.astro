@@ -1,16 +1,16 @@
 ---
-import { getCollection } from "astro:content";
-import ExperienceItem from "./ExperienceItem.astro";
-import Heading from "../Heading.astro";
-import List from "../List.astro";
+import { getCollection } from 'astro:content';
+import ExperienceItem from './ExperienceItem.astro';
+import Heading from '../Heading.astro';
+import List from '../List.astro';
 
-const experiences = await getCollection("experiences");
-const sortedExperiences = experiences.sort((a, b) => {
-  return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
-});
+const experiences = await getCollection('experiences');
+const sortedExperiences = experiences.sort((a, b) =>
+  a.id.localeCompare(b.id, undefined, { numeric: true })
+);
 ---
 
-<section id="experience">
+<section id='experience'>
   <Heading> Experience </Heading>
 
   <List>

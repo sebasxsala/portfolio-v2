@@ -1,5 +1,5 @@
 ---
-title: Ecommerce (KBDFans Clone)
-description: KBDFans Clone is a project that aims to replicate the functionality of an ecommerce platform. It is built using Next.js, Tailwind CSS, Stripe and Supabase (with prisma). Deployed using Vercel.
-href: https://kbdfans-clone.vercel.app/
+title: News-Fake
+description: News-Fake is a project built with Next.js that verifies the truthfulness of a news article or text and provides reasons for its assessment.
+href: https://news-fake.vercel.app/
 ---
